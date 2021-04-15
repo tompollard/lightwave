@@ -162,6 +162,11 @@ sandboxed-server:	sandboxed-lightwave
 	mkdir -p $(CGIDIR)
 	sudo install -m 4755 sandboxed-lightwave $(CGIDIR)
 
+# Install the sandboxed LightWAVE server on the PhysioNet CI server
+sandboxed-server-ci:	sandboxed-lightwave
+	mkdir -p $(CGIDIR)
+	install -m 4755 sandboxed-lightwave $(CGIDIR)
+
 # Install the LightWAVE scribe.
 scribe:	  patchann scribedir
 	mkdir -p $(CGIDIR)
